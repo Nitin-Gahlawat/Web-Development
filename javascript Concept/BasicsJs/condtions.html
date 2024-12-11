@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basicsjs</title>
+  </head>
+  <body>
+    <h1>if Condtions</h1>
+    <script>
+      let x = "hello";
+      // Ternary oprator
+      console.log(x.length > 5 ? x : "less than 5");
+
+      // Gaurd oprator -->use fallback value in case of any falsey value
+      console.log(0 || x);
+
+      // default oprator -->use fallback value in case of undefined or null
+      console.log(undefined ?? x);
+      console.log(null ?? x);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .newbtn {
+        background-color: gold;
+        border: none;
+        border-radius: 5px;
+        display: inline-block;
+        width: 30vw;
+        text-align: center;
+      }
+      .changes {
+        background-color: rgb(34, 34, 114);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="one" class="newbtn" onclick="changecolor()">hello world</h1>
+    <h1 id="two" class="newbtn" onclick="removenewbtn()">hello world</h1>
+    <script>
+      // Properties of the Dom
+      document.getElementById("one").innerText = "click add change class";
+      document.getElementById("two").innerHTML = "Dom manuplication";
+      console.log(document.location);
+      console.log(document.title);
+      console.log(document.domain);
+      console.log(document.getElementById("two").classList);
+
+      //   Method of the Dom
+      function changecolor() {
+        let class_one = document.querySelector("#one");
+        class_one.classList.add("changes");
+        class_one.classList.remove("newbtn");
+      }
+
+      let newbutton = document.createElement("Button");
+      newbutton.innerHTML = "Clickable";
+      document.querySelector("#two").append(newbutton);
+
+      function removenewbtn() {
+        if (document.querySelector("#two").querySelector("Button") != null)
+          document.querySelector("#two").removeChild(newbutton);
+      }
+    </script>
+  </body>
+</html>

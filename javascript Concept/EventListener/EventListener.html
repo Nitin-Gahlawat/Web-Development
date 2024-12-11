@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event listners</title>
+  </head>
+  <body>
+    <h1>Event listners</h1>
+    <button id="my-btn">Click me</button>
+    <script>
+      // Event listner in js on element
+      let buttonElement = document.querySelector("#my-btn");
+      buttonElement.addEventListener("click", () => alert("element clicked"));
+
+      // Array map method
+      let x = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      x.map((ele) => {
+        ele = ele * ele;
+      });
+      console.log(x);
+
+      // Array filter mehtod
+      console.log(x.filter((ele, i) => ele % 2 === 0));
+    </script>
+  </body>
+</html>

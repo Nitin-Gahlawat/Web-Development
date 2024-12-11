@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #2b2b2b;
+        color: white;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        font-size: large;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: plum;
+        text-align: center;
+        margin: 50px;
+        left: 10px;
+        position: relative;
+
+        animation-name: newmove;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0.5s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+      }
+      /* @keyframes move {
+        from {
+          left: 10px;
+        }
+        to {
+          left: 1200px;
+        }
+      } */
+      @keyframes newmove {
+        0% {
+          left: 10px;
+        }
+        50% {
+          left: 100px;
+        }
+        60% {
+          left: 1000px;
+        }
+        100% {
+          left: 1200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Animation 1</div>
+    <!-- <div class="box">Animation 2</div> -->
+    <!-- <div class="box">Animation 3</div> -->
+  </body>
+</html>

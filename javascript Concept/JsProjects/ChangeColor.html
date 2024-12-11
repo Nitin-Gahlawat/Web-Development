@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        border: none;
+        border-radius: 5px;
+        padding: 50px;
+      }
+      .js-odd {
+        background-color: #ffc0cb;
+      }
+      .js-even {
+        background-color: #1b32c6d3;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="button"
+      class="btn js-even"
+      id="upadatebtn"
+      value="0"
+      onclick="btnpressed()"
+    />
+    <script>
+      let ct = localStorage.getItem("pressState") ?? 0;
+      function btnpressed() {
+        ct++;
+        localStorage.setItem("pressState", ct);
+
+        console.log("run", ct);
+        changestate();
+      }
+
+      //   changes color of the btn
+      function changestate() {
+        let button = document.querySelector("#upadatebtn");
+        if (ct % 2 === 0) {
+          button.classList.remove("js-odd");
+          button.classList.add("js-even");
+        } else {
+          button.classList.remove("js-even");
+          button.classList.add("js-odd");
+        }
+        console.log(button.classList);
+        button.value = ct;
+      }
+      changestate();
+    </script>
+  </body>
+</html>
